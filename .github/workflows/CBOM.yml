@@ -39,7 +39,6 @@ jobs:
     needs: run-cbom-action
     steps:
       - uses: advanced-security/cbom-action/workflow-summary@v1
-
   repositoryNameWithOwner:
     description: The base repository to analyze
     required: false
@@ -50,15 +49,15 @@ jobs:
       to be included in the matrix
     required: false
     default: "5000"
-    
   analyzeDependencies:
     description: Whether to analyze dependencies
     required: false
     default: "false"
-      repositoryNameWithOwner:
-    description: The repository to analyze
-    required: false
-    default: ${{ github.repository }}
+    
+    repositoryNameWithOwner:
+        description: The repository to analyze
+        required: false
+        default: ${{ github.repository }}
   language:
     description: The language to analyze
     required: true
